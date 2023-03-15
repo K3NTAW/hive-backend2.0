@@ -1,0 +1,14 @@
+version: "3"
+services:
+  backend:
+    container_name: hive-backend
+    image: mysql
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env.mysql
+    volumes:
+      - ./data:/var/lib/mysql:rw
+
+  
+
